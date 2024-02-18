@@ -9,7 +9,7 @@ interface ButtonProps {
     disabled?: boolean;
     outline?: boolean;
     small?: boolean;
-    icon?: boolean;
+    icon?: IconType;
 }
 
 const Button = ({ label, onClick, disabled, outline, small, icon :Icon}: ButtonProps) => {

@@ -3,12 +3,13 @@ import { Inter,Nunito } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "./components/navbar/Navbar";
-import Modal from "./components/modals/Modal";
+import RegisterModal from "./components/modals/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 const font = Nunito({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Airbinb",
+  title: "Airbnb",
   description: "Airbnb clone",
 };
 
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
-        <Modal actionLabel="Submit" title="Hello world" isOpen/>
+        {/* <Modal actionLabel="Submit" title="Hello world" isOpen/> */}
+        <ToasterProvider />
+        <RegisterModal/>
         <Navbar />
         {children}
 
